@@ -1,0 +1,181 @@
+body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: palevioletred;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-image: url('../assets/lluvia-cora-sinfondo.gif');
+	background-repeat: cover;
+	background-position: cover;
+	background-size: cover;
+}
+.titulo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: aliceblue;
+	padding: 50px 5px;
+	border-radius: 10px;
+	border: 5px solid pink;
+	background: rgba(248, 245, 247, 0.25);
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+
+	box-shadow: 0px 0px 10px rosybrown;
+	
+}
+
+h1{
+	color: rgb(238, 238, 238);
+	align-self: center;
+	box-shadow: 0px 0px 10px rosybrown;
+
+}
+
+.botones{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-width: auto;
+	max-height: auto;
+	z-index: 1;
+}
+#btn-si{
+	background-color: white;
+	border-color:palevioletred;
+	border-radius: 15px;
+	padding: 5px 35px;
+	font-style: oblique;
+	cursor: pointer;
+	z-index: 1;
+	color: palevioletred;
+	font-size: 20px;
+	
+}
+a{
+	color: palevioletred;
+	text-decoration: none;
+}
+#btn-no{
+	background-color: white;
+	border-color: palevioletred;
+	border-radius: 15px;
+	padding: 5px 35px;
+	margin-left: 10px;
+	font-style: oblique;
+	cursor: pointer;
+	z-index: 1;
+	color: palevioletred;
+	font-size: 20px;
+	
+}
+#btn-si:hover{
+	background-color: red;
+	border-color: darkblue;
+	transform: scale(1.1);
+	color: white;
+}
+#btn-no:hover{
+	background-color: red;
+	border-color: darkblue;
+	transform: scale(1.1);
+	color: white;
+}
+
+.imagen{
+	padding: 25px 35px;
+	background: pink;
+	border: 3px solid palevioletred;
+	border-radius: 150px;
+	align-self: center;
+	top: 3px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	
+}
+
+
+/*corazon latiendo*/
+
+.corazon {
+	align-self: center;
+	background-color: pink;
+	display: inline-block;
+	height: 50px;
+	margin: 0 10px;
+	top: 0;
+	transform: rotate(-45deg);
+	position: absolute; 
+	left: 40%; 
+	top: 70%;
+	width: 50px;
+	z-index: -1;
+  }
+  
+  .corazon:before,
+  .corazon:after {
+	content: "";
+	background-color: pink;
+	border-radius: 50%;
+	height: 50px;
+	position: absolute;
+	width: 50px;
+  }
+  
+  .corazon:before {
+	top: -25px;
+	left: 0;
+  }
+  
+  .corazon:after {
+	left: 25px;
+	top: 0;
+  }
+
+  @keyframes latido {
+	0%
+	{
+	  transform: scale( 1 )
+		rotate(-45deg);    
+	}
+	20%
+	{
+	  transform: scale( 1.25 )
+		rotate(-45deg);  
+	}
+	 40%
+	{
+	  transform: scale( 1.5 )
+		rotate(-45deg);
+	}
+  }
+
+  .corazon {
+	animation: latido 1s infinite; /* nuestro corazón tiene latidos infinitos */
+  
+  }
+
+
+
+/*display´s*/
+
+@media all and (min-width: 768px) {
+	.body        { flex: 3 0px; }
+	.h1          { flex: 3 0px; }
+	.imagen      { flex: 3 0px; }
+	.btn-no      { flex: 3 0px; }
+	.btn-si      { flex: 3 0px; }
+}
+
+@media all and (min-width: 600px) {
+	.body        { flex: 3 0px; }
+	.h1          { flex: 3 0px; }
+	.imagen      { flex: 3 0px; }
+	.btn-no      { flex: 3 0px; }
+	.btn-si      { flex: 3 0px; }
+}
